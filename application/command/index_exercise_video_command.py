@@ -1,10 +1,12 @@
 from typing import List
 
+from pydantic.main import BaseModel
 
-class FrameVectorPair:
-    def __init__(self, order: int, vector: List[float]):
-        self.order = order
-        self.vector = vector
+
+class FrameVectorPair(BaseModel):
+    order: int
+    vector: List[float]
+
 
 
 class IndexExerciseVideoCommand:
