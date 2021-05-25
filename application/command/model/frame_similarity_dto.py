@@ -1,12 +1,17 @@
-class FrameSimilarityDTO:
-    def __init__(self,
-                 score: float,
-                 exerciseId: int,
-                 exerciseName: str,
-                 tag: str,
-                 order: int):
-        self.score = score
-        self.exerciseId = exerciseId
-        self.exerciseName = exerciseName
-        self.tag = tag
-        self.order = order
+from typing import List
+
+from pydantic import BaseModel
+
+
+class FrameSimilarityDTO(BaseModel):
+    score: float
+    exerciseId: int
+    exerciseName: str
+    tag: str
+    order: int
+
+
+class FrameSimilarityResponse(BaseModel):
+    frameSimilarities: List[FrameSimilarityDTO]
+
+

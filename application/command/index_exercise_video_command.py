@@ -9,7 +9,7 @@ class FrameVectorPair(BaseModel):
 
 
 
-class IndexExerciseVideoCommand:
+class IndexExerciseVideoCommand: # TODO: ADD url identifier
     def __init__(self,
                  exercise_id: int,
                  exercise_name: str,
