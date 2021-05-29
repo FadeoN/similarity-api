@@ -14,12 +14,12 @@ async def handle(command: IndexExerciseVideoCommand):
     actions = [
         {
             "_index": command.index,
-            # "_id": hashlib.md5(f"{command.exercise_id}_{frame_vector_pair.order}".encode("utf-8")).hexdigest(),
             "_source": {
                 "frameVector": frame_vector_pair.vector,
                 "exerciseId": command.exercise_id,
                 "exerciseName": command.exercise_name,
                 "tag": command.tag,
+                "url": command.url,
                 "order": frame_vector_pair.order,
                 "indexedAt": datetime.now(timezone.utc),
             }

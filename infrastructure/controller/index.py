@@ -21,6 +21,7 @@ async def index_exercise_video(request: IndexExerciseVideoRequest):
             exercise_id=request.exerciseId,
             exercise_name=request.exerciseName,
             tag=request.tag,
+            url=request.url,
             frame_vector_pairs=request.frameVectorPairs,
             index=request.index
         ))

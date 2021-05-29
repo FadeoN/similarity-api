@@ -33,6 +33,9 @@ async def handle(command: CreateFramesIndexCommand) -> str:
                 },
                 "indexedAt": {
                     "type": "date"
+                },
+                "url": {
+                    "type": "text"
                 }
             }
         }
