@@ -51,6 +51,17 @@ services:
       - odfe-data2:/usr/share/elasticsearch/data
     networks:
       - odfe-net
+   backend:
+    container_name: similarity-service
+    build: .
+    command: python3 main.py
+    restart: on-failure
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+    networks:
+      - odfe-net
 
 volumes:
   odfe-data1:
