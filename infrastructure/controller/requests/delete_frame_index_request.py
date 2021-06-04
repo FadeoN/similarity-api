@@ -4,6 +4,6 @@ from pydantic.main import BaseModel
 
 
 class DeleteFrameIndexRequest(BaseModel):
-    exerciseId: int
+    exerciseId: str
     order: int
     index: Optional[str]

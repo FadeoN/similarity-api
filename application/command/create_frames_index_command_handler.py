@@ -29,7 +29,7 @@ async def handle(command: CreateFramesIndexCommand) -> str:
                     "type": "long"
                 },
                 "exerciseId": {
-                    "type": "long",
+                    "type": "text",
                 },
                 "indexedAt": {
                     "type": "date"

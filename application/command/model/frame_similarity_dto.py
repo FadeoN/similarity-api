@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class FrameSimilarityDTO(BaseModel):
     score: float
-    exerciseId: int
+    exerciseId: str
     exerciseName: str
     tag: str
     order: int

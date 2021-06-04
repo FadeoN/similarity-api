@@ -6,7 +6,7 @@ from application.command.index_exercise_video_command import FrameVectorPair
 
 
 class IndexExerciseVideoRequest(BaseModel):
-    exerciseId: int
+    exerciseId: str
     exerciseName: str
     url: str
     tag: str
